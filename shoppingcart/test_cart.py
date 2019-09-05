@@ -1,4 +1,4 @@
-from shoppingcart.cart import ShoppingCart
+from cart import ShoppingCart
 
 def test_add_item():
     cart = ShoppingCart()

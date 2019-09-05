@@ -2,10 +2,10 @@ import typing
 from collections import OrderedDict
 import json
 
-from . import abc
+import abcModule
 
 
-class ShoppingCart(abc.ShoppingCart):
+class ShoppingCart(abcModule.ShoppingCart):
     def __init__(self):
         self._items = OrderedDict()
         self._PRICES = dict()
