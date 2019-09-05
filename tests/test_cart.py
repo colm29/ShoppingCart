@@ -1,6 +1,5 @@
 from shoppingcart.cart import ShoppingCart
 
-
 def test_add_item():
     cart = ShoppingCart()
     cart.add_item("apple", 1)
