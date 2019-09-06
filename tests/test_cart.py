@@ -1,4 +1,4 @@
-from cart import ShoppingCart
+from shoppingcart.cart import ShoppingCart
 
 def test_add_item():
     cart = ShoppingCart()
@@ -24,9 +24,11 @@ def test_add_different_items():
     cart.add_item('kiwi', 1)
 
     receipt = cart.print_receipt()
-
+    
     assert receipt[0] == 'banana - 1 - €1.10'
     assert receipt[1] == 'kiwi - 1 - €3.00'
+
+    return receipt
 
 def test_add_different_items_Currency(curr):
     cart = ShoppingCart()
@@ -39,5 +41,5 @@ def test_add_different_items_Currency(curr):
     """ assert receipt[0].startswith('apple -1 - %s' curr)
     assert receipt[1].startswith('kiwi - 1 - %s' curr) """
     
-if __name__ == '__main__':
-    test_add_different_items_Currency('USD')
+# if __name__ == '__main__':
+#     test_add_different_items_Currency('USD')

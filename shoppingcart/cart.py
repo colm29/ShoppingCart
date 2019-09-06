@@ -1,17 +1,18 @@
 import typing
 from collections import OrderedDict
 import json
+import sys, os
 
 from . import abc
-from . import helpers.currency.getCurr
+from .helpers.currency import getCurr
 
 
 class ShoppingCart(abc.ShoppingCart):
     def __init__(self):
         self._items = OrderedDict()
         self._prices = dict()
-
-        self._prices = json.loads(open('prices.json', 'r').read())
+        jsonLoc = os.path.join(sys.path[0], 'prices.json')
+        self._prices = json.loads(open(jsonLoc), 'r').read())
 
     def add_item(self, product_code: str, quantity: int):
         if product_code not in self._items:

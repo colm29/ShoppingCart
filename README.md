@@ -13,9 +13,19 @@ Tasks requested:
 - Update the test suite to extend coverage and limit the number of tests which need changing when changes are introduced
 - Any other changes which improve the reliability of this code in production
 
-If you do not have enough information, make any assumptions you would like and note them down with TODO comments.
+## Done
+* Set up prices in json file and retrieve this in ShoppingCart object
+* Set up helper function getCurr to retrieve currency rates relative to Euro from fixer.io api
 
-We believe this should take less than 3 hours to complete, but understand you may have other commitments and time constraints.
-Please let me know (roughly) when we should expect your answers (e.g. "Over the weekend") or if you need more time. It may take us 2 to 3 days to review your answers.
-
-Please don’t forget, your code should be production ready, clean and tested!
+## TODO
+* Fix path accessing json file
+* Change Test suite
+  * granular tests testing one function
+  * Test retrieving price data from json
+    * check returned product, prices object is not empty
+    * use these records in subsequent tests instead of hardcoding values
+  * Test receiving currency data from api
+    * Check api returned object is not empty
+    * Add tests similar to existing tests but passing in required currency
+    * Currency value to use in test can be retrieved from api database
+  
