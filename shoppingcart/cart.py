@@ -2,11 +2,11 @@ import typing
 from collections import OrderedDict
 import json
 
-import abcModule
-from currency import getCurr
+from . import abc
+from . import helpers.currency.getCurr
 
 
-class ShoppingCart(abcModule.ShoppingCart):
+class ShoppingCart(abc.ShoppingCart):
     def __init__(self):
         self._items = OrderedDict()
         self._prices = dict()
